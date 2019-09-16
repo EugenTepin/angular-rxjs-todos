@@ -9,7 +9,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "publish": "./publish.sh"
+    "publish": "./publish.sh",
+    "update-alien": "npx gulp update-components"
   },
   "private": true,
   "dependencies": {
