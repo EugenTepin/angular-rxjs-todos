@@ -1,0 +1,3 @@
+[submodule "src/assets/alien"]
+	path = src/assets/alien
+	url = https://github.com/EugenTepin/custom-elements-lib.git
