@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 import { Subscription } from 'rxjs/Subscription';
 
@@ -21,6 +21,7 @@ export class TodoFooterComponent implements OnInit, OnDestroy {
 
   constructor(
     private route: ActivatedRoute,
+    public router: Router,
     private todoService: TodoService
   ) { }
 
@@ -47,5 +48,7 @@ export class TodoFooterComponent implements OnInit, OnDestroy {
   removeCompleted(): void {
     this.todoService.removeCompleted();
   }
-
+  removeCompleted_alien(): void {
+    this.todoService.removeCompleted.bind(this.todoService)();
+  }
 }
