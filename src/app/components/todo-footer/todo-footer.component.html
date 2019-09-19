@@ -13,4 +13,4 @@
   </ul>
   <button class="clear-completed" *ngIf="hasCompleted" (click)="removeCompleted()">Clear Completed</button>
 </footer>
-<react-todo-footer [count]="remainintCount" [hasCompleted]="hasCompleted" [removeCompleted]="removeCompleted_alien" [status]="currentStatus" [router]="router"></react-todo-footer>
+<react-todo-footer [count]="remainintCount" [hasCompleted]="hasCompleted" (clear-completed)="removeCompleted()" [status]="currentStatus" [router]="router"></react-todo-footer>
