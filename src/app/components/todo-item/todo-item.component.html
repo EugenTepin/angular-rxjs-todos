@@ -1,10 +1,15 @@
 <li [class.completed]="todo.completed" [class.editing]="editing">
   <div class="view">
-    <input type="checkbox" class="toggle" [checked]="todo.completed" (click)="toggle()">
+    <input
+      type="checkbox"
+      class="toggle"
+      [checked]="todo.completed"
+      (click)="toggle()"
+    />
     <label (dblclick)="edit()">{{ todo.title }}</label>
     <button class="destroy" (click)="remove()"></button>
   </div>
-  <input 
+  <input
     type="text"
     class="edit"
     #edittodo
@@ -15,3 +20,16 @@
     (keyup.escape)="cancelEditing()"
   />
 </li>
+
+<react-todo-item
+  [editing]="editing"
+  (todo-toggle)="toggle()"
+  (todo-remove)="remove()"
+  (todo-edit)="edit()"
+  [todoCompleted]="todo.completed"
+  [todoTitle]="todo.title"
+  #edittodo
+  (todo-stop-edit)="stopEditing(edittodo.value)"
+  (todo-submit)="stopEditing(edittodo.value)"
+  (todo-cancel-edit)="cancelEditing()"
+></react-todo-item>
