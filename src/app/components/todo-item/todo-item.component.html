@@ -1,4 +1,4 @@
-<li [class.completed]="todo.completed" [class.editing]="editing">
+<!-- <li [class.completed]="todo.completed" [class.editing]="editing">
   <div class="view">
     <input
       type="checkbox"
@@ -19,17 +19,14 @@
     (keyup.enter)="stopEditing(edittodo.value)"
     (keyup.escape)="cancelEditing()"
   />
-</li>
+</li> -->
 
 <react-todo-item
+  #edittodo
+  [todoTitle]="todo.title"
+  [todoCompleted]="todo.completed"
   [editing]="editing"
+  (todo-edit)="stopEditing(edittodo.value)"
   (todo-toggle)="toggle()"
   (todo-remove)="remove()"
-  (todo-edit)="edit()"
-  [todoCompleted]="todo.completed"
-  [todoTitle]="todo.title"
-  #edittodo
-  (todo-stop-edit)="stopEditing(edittodo.value)"
-  (todo-submit)="stopEditing(edittodo.value)"
-  (todo-cancel-edit)="cancelEditing()"
 ></react-todo-item>
