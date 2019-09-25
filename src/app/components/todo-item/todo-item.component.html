@@ -21,11 +21,12 @@
   />
 </li> -->
 
+<!-- {{ todo | json }} -->
+
 <react-todo-item
   #edittodo
   [todoTitle]="todo.title"
   [todoCompleted]="todo.completed"
-  [editing]="editing"
   (todo-edit)="stopEditing(edittodo.value)"
   (todo-toggle)="toggle()"
   (todo-remove)="remove()"
