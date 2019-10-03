@@ -14,24 +14,21 @@ import { TodoHeaderComponent } from './components/todo-header/todo-header.compon
 import { TodoListComponent } from './components/todo-list/todo-list.component';
 import { TodoItemComponent } from './components/todo-item/todo-item.component';
 import { TodoFooterComponent } from './components/todo-footer/todo-footer.component';
+import { ReactTodoFooterComponent } from './components/react-todo-footer/react-todo-footer.component';
 
 @NgModule({
-  imports: [
-    BrowserModule,
-    FormsModule,
-    RouterModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, FormsModule, RouterModule, AppRoutingModule],
   declarations: [
     AppComponent,
     TodoHeaderComponent,
     TodoListComponent,
     TodoItemComponent,
     TodoFooterComponent,
+    ReactTodoFooterComponent,
     ...routedComponents
   ],
-  providers: [ TodoService ],
-  bootstrap: [ AppComponent ],
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
+  providers: [TodoService],
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class AppModule { }
+export class AppModule {}
