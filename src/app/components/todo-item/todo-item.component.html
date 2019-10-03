@@ -23,11 +23,22 @@
 
 <!-- {{ todo | json }} -->
 
-<react-todo-item
+<!-- <react-todo-item
   #edittodo
+  #bingo
   [todoTitle]="todo.title"
   [todoCompleted]="todo.completed"
   (todo-edit)="stopEditing(edittodo.value)"
   (todo-toggle)="toggle()"
   (todo-remove)="remove()"
-></react-todo-item>
+></react-todo-item> -->
+
+<react-todo-item-unmount
+  #edittodo
+  #bingo
+  [todoTitle]="todo.title"
+  [todoCompleted]="todo.completed"
+  (todo-edit)="stopEditing(edittodo.value)"
+  (todo-toggle)="toggle()"
+  (todo-remove)="remove()"
+></react-todo-item-unmount>
